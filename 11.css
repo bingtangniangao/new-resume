@@ -1,0 +1,81 @@
+body{
+  background: #efefef; 
+   color:black;
+  margin:0;
+}
+a{
+  color:inherit;
+  text-decoration: none;
+}
+ul{
+  margin:0;
+  padding:0;
+}
+
+.clearfix::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.topNavBar{
+  outline: 1px solid red;
+  padding:20px 0px;/*maring 没反应*/
+  position: fixed;/*1高度脱离了,宽度也窄了,所以宽度要 100%*/
+  width :100%;
+}
+.topNavBar-inner{
+  padding:0px 16px;
+  /* width :100%; */
+}
+.topNavBar  a {
+  float:left;
+}
+.topNavBar .logo{
+  padding:3px 4px;
+  outline: 1px solid gold;
+ 
+}
+.topNavBar .logo>.rs{
+  color:gray;
+  font-size: 24px;
+}
+.topNavBar .logo>.card{
+  color:red;
+  font-size: 24px;
+}
+.topNavBar  nav{
+  float:right;
+  outline: 1px solid aquamarine;
+  padding:7px 0 0 0;
+  
+}
+.topNavBar  nav>ul{
+  list-style: none;
+  outline: 1px solid chartreuse;
+
+}
+.topNavBar nav>ul>li{
+  float:left;
+  margin:0 17px;
+  
+
+}
+.topNavBar  nav>ul>li>a{
+  font-size: 12px;
+  color:b7B7B7;
+  text-decoration: none;
+  font-weight:bold;
+  border:3px solid transparent;
+  padding:5px 0;  /* 重点 li 不会包住 a  */
+  display: block;/* 重点 li 不会包住 a 加 block */
+}
+
+.topNavBar  nav>ul>li>a:hover{
+ border-bottom:3px solid red;
+}
+.banner{
+ background-image:url(./img/rs-cover.jpg);
+ height:515px;
+ background-position: center center;
+ background-size:cover;
+}

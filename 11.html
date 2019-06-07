@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的简历</title>
-  <link rel="stylesheet" href="./a.css">
+  <link rel="stylesheet" href="./11.css">
   <link rel="stylesheet" href="./loading.css">
-  <!-- <script src="//at.alicdn.com/t/font_1222805_gy1pmk400oq.js"></script> -->
+
   <style type="text/css">
     .icon {
        width: 1em; height: 1em;
@@ -31,28 +31,25 @@
 </style>
 </head>
 <body>
-  <div id="siteWelcome" class="site-welcome active">
-      <div class="loading"></div>
-  </div>
+
  
-  <div id="topNavBar" class="topNavBar " >
+  <div class="topNavBar ">
     <div class="topNavBar-inner clearfix">
         <a class="logo" href="">
-          <span class="rs">RS</span><span class="card">card</span>
+            <span class="rs">RS</span><span class="card">card</span>
         </a>
-        <nav>
-          <ul class="clearfix">
-            <li><a href="#">关于</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">作品</a></li>
-            <li><a href="#">博客</a></li>
-            <li><a href="#">日历</a></li>
-            <li><a href="#">联系方式</a></li>
-            <li><a href="#">其他</a></li>
-            </ul>
-        </nav>
-    </div>
-  
+          <nav>
+              <ul class="clearfix">
+                  <li><a href="#">关于</a></li>
+                  <li><a href="#">技能</a></li>
+                  <li><a href="#">作品</a></li>
+                  <li><a href="#">博客</a></li>
+                  <li><a href="#">日历</a></li>
+                  <li><a href="#">联系方式</a></li>
+                  <li><a href="#">其他</a></li>
+                </ul>
+          </nav>
+      </div>
 </div>
 <div class="banner">
   <div class="mask"></div>  
@@ -185,20 +182,7 @@
         </div>
   
       </section>
-<script>
-   var siteWelcome=document.querySelector('#siteWelcome')
-   setTimeout(function(){
-    siteWelcome.classList.remove('active');
-   },1000)
-  window.onscroll = function(xxxx){
-    if(window.scrollY>0){
-      topNavBar.classList.add('sticky')
-    }else{
-      topNavBar.classList.remove('sticky')
-    }
-    // console.log(window.scrollY)
-  }
-</script>
+
 
 </body>
 </html>
