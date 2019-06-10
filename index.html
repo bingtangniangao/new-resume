@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的简历</title>
-  <link rel="stylesheet" href="./a.css">
-  <link rel="stylesheet" href="./loading.css">
-  <!-- <script src="//at.alicdn.com/t/font_1222805_gy1pmk400oq.js"></script> -->
+  <link rel="stylesheet" href="./b.css">
+  <link rel="stylesheet" href="./loading1.css">
   <style type="text/css">
     .icon {
        width: 1em; height: 1em;
@@ -34,8 +33,7 @@
   <div id="siteWelcome" class="site-welcome active">
       <div class="loading"></div>
   </div>
- 
-  <div id="topNavBar" class="topNavBar " >
+  <div id="topNavBar" class="topNavBar" >
     <div class="topNavBar-inner clearfix">
         <a class="logo" href="">
           <span class="rs">RS</span><span class="card">card</span>
@@ -45,14 +43,21 @@
             <li><a href="#">关于</a></li>
             <li><a href="#">技能</a></li>
             <li>
-              <a href="#">作品</a>
-              <ul class="submenu">
-                <li style="display: block">作品1</li>
+              <a class="menuTrigger" href="#">作品</a>
+              <ul class='submenu'>
+                <li>作品1</li>
                 <li>作品2</li>
                 <li>作品3</li>
               </ul>
             </li>
-            <li><a href="#">博客</a></li>
+            <li>
+              <a class="menuTrigger" href="#">博客</a>
+              <ul class='submenu'>
+                  <li>博客1</li>
+                  <li>博客2</li>
+                  <li>博客3</li>
+                </ul>
+            </li>
             <li><a href="#">日历</a></li>
             <li><a href="#">联系方式</a></li>
             <li><a href="#">其他</a></li>
@@ -74,7 +79,7 @@
             <span class="welcome">Hello
                 <span class="triangle"></span>
             </span>
-            <h1>方应杭</h1>
+            <h1>小白龙</h1>
             <p>前端开发工程师</p>
             <hr>
             <dl>
@@ -107,7 +112,7 @@
             </a>
       </footer>
   
-    </div>
+</div>
     
   
     <p class="downloadResume-wrapper">
@@ -117,7 +122,7 @@
           方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。
           <br> 技能：前端开发，Rails 开发，Node.js 开发
         </p>
-  </main>
+</main>
   <section class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
@@ -152,6 +157,23 @@
         <div class="progressBar">
           <div class="progress" style="width: 40%"></div>
         </div>
+      </li>
+      <li>
+        <h3>
+          React.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"  style="width: 50%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Node.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"  style="width: 60%"></div>
+        </div>
+      </li>
     </ol>
     </section>
     <section class="portfolio">
@@ -204,6 +226,18 @@
       topNavBar.classList.remove('sticky')
     }
     // console.log(window.scrollY)
+  }
+  // 
+  let aTags = document.getElementsByClassName('menuTrigger')
+  for(let i = 0;i<aTags.length;i++){
+    aTags[i].onmouseenter = function(x){
+      let a = x.currentTarget
+      a.nextSibling
+      console.log('mouseenter')
+    }
+    aTags[i].onmouseleave = function(){
+      console.log('mouseleave')
+    }
   }
 </script>
 

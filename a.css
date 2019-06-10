@@ -1,6 +1,6 @@
 body{
   background: #efefef; 
-   color:black;
+   /* color:black; */
   margin:0px;
 }
 *{
@@ -38,8 +38,9 @@ a{
 
 }
 .topNavBar .topNavBar-inner{
- margin:0 16px;}
-.topNavBar a{
+  padding:0 16px;
+}
+.topNavBar .logo{
   float:left;
   font-size: 24px;
   font-family: "Arial Black";
@@ -56,7 +57,7 @@ a{
   float:right;
  padding-top:7px;
 }
-.topNavBar   nav>ul{
+.topNavBar nav>ul{
   list-style: none;
   margin:0;
   padding:0;
@@ -66,6 +67,7 @@ a{
   float:left;
   outline:1px solid green;
   margin:0px 17px;
+  position: relative;
 }
 .topNavBar  nav>ul>li>a{
   font-size:12px;
@@ -100,6 +102,14 @@ a{
   100%{
     width:100%;
   }
+}
+.submenu{
+  /* display:none; */
+
+}
+.topNavBer .a1{
+  display:block;
+  position:absolute;
 }
 /* bar */
 
