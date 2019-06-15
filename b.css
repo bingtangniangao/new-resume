@@ -1,6 +1,22 @@
 * { margin: 0;padding: 0;}
 body{margin: 0;padding: 0;}
 .clearfix::after{content: '';display: block;clear:both;}
+[data-x].active{
+  outline:1px solid red;
+}
+[data-x].animate{
+  animation: slideUp 0.5s;
+}
+
+
+@keyframes slideUp{
+  0%{
+    transform:translateY(-30px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 ol,ul{list-style: none;margin: 0;padding: 0;}
 a{text-decoration: none;}
 .topNavBar{outline: 1px solid goldenrod;padding:20px 0px;color:#b7b7b7;
@@ -17,7 +33,7 @@ position: fixed;top: 0;left: 0;width: 100%; transition: all 1s}
 outline: 1px solid fuchsia;float:left;margin:0 16px;position: relative;}
 .topNavBar nav > ul > li > a {font-size: 12px;color: inherit;font-weight: bold;display: block;border-top:3px solid transparent;border-bottom:3px solid transparent;padding:5px 0;position: relative;}
 /* .topNavBar nav > ul > li > a:hover{border-bottom:3px solid red;} */
-.topNavBar nav > ul > li.active > a::after{
+.topNavBar nav > ul > li.active > a::after,.topNavBar nav > ul > li.highlight > a::after{
   content:'';
   display: block;
   position:absolute;
@@ -39,11 +55,21 @@ outline: 1px solid fuchsia;float:left;margin:0 16px;position: relative;}
   top: 100%;
   background: white;
   color:#3d4451;
+  box-shadow:0 0 5px rgba(0, 0, 0, 0.8)
 }
 .topNavBar li.active > .submenu{
   display:block;
+  animation: submenuSlide .3s;
 }
-.topNavBar .submenu.active>li{
+@keyframes submenuSlide{
+  0%{
+    margin-right:100%;
+  }
+  100%{
+    margin-right:0;
+  }
+}
+.topNavBar .submenu>li{
   white-space: nowrap;
   padding:5px 10px;
 }
